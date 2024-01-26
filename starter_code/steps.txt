@@ -1,3 +1,5 @@
+---------MILESTONE 1---------
+
 ### STEP 1 ->  Setup screen ###
 
 main.py:
@@ -26,6 +28,8 @@ main.py:
     - Add to game loop method that moves snake forward while game not Over
     - Add tracer(0) to screen and include sleep, update in game loop method
 
+---------MILESTONE 2---------
+
 ### STEP 4 -> turning left and right ###
 
 snake.py:
@@ -36,6 +40,8 @@ main.py:
     - Add screen listener to screen attribute in Game Controller
     - add onkeypress that turns snake left on 'Left' key press
     - add onkeypress that turns snake right on 'Right' key press
+
+---------MILESTONE 3---------
         
 ### STEP 5 -> Create Food ###
 
@@ -64,6 +70,8 @@ snake.py:
     - complete eat food method that increases size of snake body
     - call eat food method inside detect collission food method only if conditional statement is True
 
+---------MILESTONE 4---------
+
 ### STEP 8 -> Create Scoreboard  ###
 
 scoreboard.py;
@@ -84,6 +92,8 @@ main.py;
     - Add increment score in case of collission with food inside the hadnel collission food method of GameController class
 
 
+---------MILESTONE 5---------
+
 ### STEP 10 -> check for collisionos with wall ###
 
 snake.py: 
@@ -101,6 +111,8 @@ snake.py:
 
 main.py; 
     - add detect collission with self to the conditionoal statement in game over method 
+
+---------MILESTONE 6---------
 
 ### STEP 12 -> GAME OVER screen ###
 
