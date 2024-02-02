@@ -23,6 +23,8 @@ class GameController:
         
         # add screen listeners
         self.screen.listen()
+        self.screen.onkeypress(self.snake.turn_up, 'Up')
+        self.screen.onkeypress(self.snake.turn_down, "Down")
         self.screen.onkeypress(self.snake.turn_left, 'Left')
         self.screen.onkeypress(self.snake.turn_right, 'Right')
 

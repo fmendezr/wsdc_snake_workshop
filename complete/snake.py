@@ -8,6 +8,7 @@ class Segment:
         self.turtle.color('white')
         self.turtle.penup()
         self.turtle.goto(initial_position)
+        self.direction = "right"
 
     # return position 
     def get_position(self):
@@ -28,13 +29,29 @@ class Head(Segment):
         self.turtle.forward(20)
         self.position = self.turtle.pos()
 
+    # change direction up
+    def turn_up(self):
+        if self.direction != "down":
+            self.turtle.setheading(90)
+            self.direction = "up"
+
+    # change direction down 
+    def turn_down(self):
+        if self.direction != "up":
+            self.turtle.setheading(270)
+            self.direction = "down"
+
     # change directioon left
     def turn_left(self):
-        self.turtle.left(90)
+        if self.direction != "right":
+            self.turtle.setheading(180)
+            self.direction = "left"
     
     # change direction right
     def turn_right(self):
-        self.turtle.right(90)
+        if self.direction != "left":
+            self.turtle.setheading(0)
+            self.direction = "right"
 
     # check how far an object is
     def get_distance(self, coord):
@@ -56,6 +73,14 @@ class Snake:
         for i in range(len(self.segments) - 1, 0, -1): 
             self.segments[i].change_position(self.segments[i - 1].get_position()) 
         self.head.move_forward()
+
+    # change diretion up
+    def turn_up(self):
+        self.head.turn_up()
+
+    # change direction down
+    def turn_down(self):
+        self.head.turn_down()
 
     # change directiions left
     def turn_left(self):
